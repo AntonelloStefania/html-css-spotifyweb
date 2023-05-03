@@ -213,7 +213,7 @@ body{
 
 .time-start, .time-end{
     height: 100%;
-    width: 13%;
+    width: 5%;
     background-color: green;
     display: flex;
     align-items: center;
@@ -244,6 +244,26 @@ body{
     width: 100%;
     height: 50%;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.play-buttons{
+    align-items: center;
+}
+
+#play-button-bottom{
+    font-size: 25px;
+}
+
+.play-buttons ul, .volume-icons ul{
+    list-style-type: none;
+}
+
+.play-buttons li{
+    display:inline;
+    color: white;
+    margin: 0 20px;
 }
 
 .song-img{
@@ -292,6 +312,53 @@ body{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.time-bar{
+    position: relative;
+}
+
+.time-bar-block{
+    width:90%;
+    height: 5px;
+    background-color: #5A5A5A;
+    margin-top: 5px;
+    display: block;
+}
+
+.time-bar-hover{
+    width: 25%;
+    height: 5px;
+    display: none;
+    background-color: greenyellow;
+    position: absolute;
+    top: 5px;
+    left: 30px;
+}
+
+.fa-circle{
+    color: white;
+    position: absolute;
+    top: -5px;
+    left: 142px;
+    display: none;
+}
+
+.time-bar:hover .time-bar-hover, .time-bar:hover .fa-circle{
+    display: block;
+}
+
+.volume-icons{
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.volume-icons li{
+    display: inline;
+    color: white;
+    margin: 0 5px;
 }
 
 /* MAIN LAYOUT */
