@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Spotify</title>
+    </head>
+    <body>
+        <!-- BARRA NAVIGAZIONE LATERALE -->
+        <div class="left-navbar">
+            <div class="left-logo">
+                <img src="./img/logo.svg" alt="logo-spotify" id="left-logo-img">
+            </div>
+            <div class="navbar-list">
+                <ul>
+                    <li>
+                        <a href="#"> 
+                          <img src="./img/home.svg" alt="" class="navbar-list-icon"><span> Home </span>  
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            <img src="./img/search.svg" alt="" class="navbar-list-icon"><span> Cerca </span>  
+                          </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            <img src="./img/libreria.svg" alt="" class="navbar-list-icon">
+                            <span> La tua libreria </span>  
+                          </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-playlist">
+                <h5>PLAYLIST</h5>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-plus"></i>
+                            <span>Crea Playlist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Nome Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nome Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nome Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nome Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nome Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#">Nome Playlist</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-singer">
+                <div class="install-app">
+                    <a href="#">
+                        <i class="fas fa-arrow-down"></i><span>Installa app</span>
+                    </a>
+                </div>
+                <hr id="navbar-hr">
+                <div class="profile">
+                    <a href="#">
+                        <img src="./img/profile.svg" alt="profile" id="profile-img">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- CONTENITORE PRINCIPALE  -->
+        <div class="right-main">
+            <!-- TOPBAR -->
+            <div class="topbar">
+                <button id="upgrade-button"> upgrade</button>
+            </div>
+            <!-- MAIN -->
+            <div class="main">
+                <div class="upper-list"></div>
+                <div class="recently-played">
+                    <div class="playlist-type"></div>
+                    <div class="playlist-cards"></div>
+                    <div class="playlist-cards"></div>
+                    <div class="playlist-cards"></div>
+                    <div class="playlist-cards"></div>
+                    <div class="playlist-cards"></div>
+                </div>
+                <div class="created-for">
+                    <div class="created-type"></div>
+                    <div class="playlist-cards"></div>
+                    <div class="playlist-cards"></div>
+                </div>
+                <div class="most-popular">
+                    <div class="popular-type"></div>
+                    <div class="popular-cards"></div>
+                    <div class="popular-cards"></div>
+                </div>
+            </div>
+        </div>
+        <!-- BOTTOM BAR -->
+        <div class="bottom-bar">
+            <div class="song"></div>
+            <div class="play"></div>
+            <div class="volume"></div>
+        </div>
+    </body>
+</html>
