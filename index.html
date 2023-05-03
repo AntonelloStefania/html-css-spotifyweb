@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
         <title>Spotify</title>
@@ -244,7 +244,7 @@
                 <div class="time-bar">
                     <div class="time-bar-block"></div>
                     <div class="time-bar-hover">
-                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle" id="play-circle"></i>
                     </div>
                 </div>
             </div>
@@ -263,7 +263,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="volume-bar"></div>
+                <div class="volume-bar">
+                    <div class="volume-bar-block"></div>
+                    <div class="volume-bar-hover">
+                        <i class="fas fa-circle" id="volume-circle"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
