@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 /* UTILITIES */
 
@@ -55,9 +55,9 @@ body{
 }
 
 .top-navbar{
-    /* background-color: black;
-    width: 260px; */
-    height: 80vh;
+    background-color: black;
+    width: 260px;
+    height: 500px;
     z-index: 3;
     position: fixed;
 }
@@ -76,6 +76,7 @@ body{
     left: 0;
     padding: 5px;
     display: none;
+    z-index: 4;
     
 }
 
@@ -203,6 +204,7 @@ body{
 /* TOPBAR */
 .topbar{
     width: 100%;
+    min-width: 600px;
     top: 0;
     left: 260px;
     height: 80px;
@@ -232,18 +234,22 @@ body{
 
 /* BOTTOM BAR */
 .bottom-bar{
-    width: 100%;
+    max-width: 100%;
+    min-width: 600px;
     height: 80px;
     background-color: #282828;
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     z-index: 4;
+    justify-content: space-between;
 }
 
 
 .song, .volume{
-    width: 30%;
+    width: 260px;
     height: 100%;
     /* background-color: rgb(94, 197, 163); */
     display: flex;
@@ -251,13 +257,13 @@ body{
 
 .time-start, .time-end{
     height: 100%;
-    width: 5%;
+    width: 0px;
     /* background-color: green; */
     display: flex;
     align-items: center;
     color: white;
-    font-weight: bold;
-    padding-top: 20px;
+    /* padding-top: 15px; */
+    padding-bottom: 22px;
 }
 
 .time-start{
@@ -268,10 +274,11 @@ body{
 .time-end{
     justify-content: flex-start;
     padding-left: 15px;
+    
 }
 
 .play{
-    width:30%;
+    width:500px;
     height: 100%;
     /* background-color: rgb(15, 37, 37); */
     display: flex;    
@@ -288,6 +295,7 @@ body{
 
 .play-buttons{
     align-items: center;
+    cursor: pointer;
 }
 
 #play-button-bottom{
@@ -345,6 +353,7 @@ body{
     margin-left: 5px;
     margin-right: 15px;
     color: transparent;
+    color: #6e6e6e;
 }
 
 .song-img,.song-icons{
@@ -355,6 +364,7 @@ body{
 
 .time-bar, .volume-bar{
     position: relative;
+    cursor: pointer;
 }
 
 .time-bar-block{
@@ -372,7 +382,7 @@ body{
     background-color: greenyellow;
     position: absolute;
     top: 5px;
-    left: 30px;
+    left: 5%;
 }
 
 .volume-bar{
@@ -402,7 +412,7 @@ body{
     color: white;
     position: absolute;
     top: -5px;
-    left: 190px;
+    left: 90%;
     display: none;
 }
 
@@ -410,7 +420,7 @@ body{
     color: white;
     position: absolute;
     top: -5px;
-    left: 33px;
+    left: 83%;
 }
 
 .time-bar:hover .time-bar-hover, .time-bar:hover #play-circle, .volume-bar:hover .volume-bar-hover{
@@ -435,6 +445,27 @@ body{
     width: 50%;
     height: 100%;
     /* background-color: red; */
+}
+
+.song-name a, .volume-icons a{
+    text-decoration: none;
+}
+
+.song-name h4:hover, .song-name span:hover{
+    text-decoration: underline white;
+}
+
+.song-icons i:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.volume-icons a{
+    color: white;
+}
+
+#play-button-bottom:hover{
+    transform: scale(1.2);
 }
 
 /* MAIN LAYOUT */
@@ -515,6 +546,7 @@ body{
     left: 0;
     font-size: 75px;
     display: none;
+    cursor: pointer;
 }
 
 .popular-cards .cards-hover{
@@ -552,6 +584,10 @@ body{
         text-align: center;
         line-height: 2.5;
     }
+
+    .play{
+        width: 300px;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -588,23 +624,36 @@ body{
 @media screen and (max-width:600px){
 
     .left-navbar, .navbar-singer{
-        width: 60px;
+        width: 50px;
     }
 
     #left-logo-mobile{
         display: block;
+        padding: 7px;
+        margin-top: 5px;
     }
 
-    .navbar-list span, .navbar-playlist, .left-logo, .install-app span, .profile span, #navbar-hr{
+    .navbar-list span, .navbar-playlist, .left-logo img, .install-app span, .profile span, #navbar-hr{
         display: none;
     }
 
+    .top-navbar{
+        width: 50px;
+        z-index: 1;
+    }
+
+   
     .topbar{
         left: 50px;
     }
 
     #upgrade-button{
         transform: translateX(-65px);
+    }
+
+    .navbar-list{
+        top: 45px;
+        width: 50px;
     }
 
     .right-main{
@@ -629,12 +678,7 @@ body{
     }
 
     .time-start, .time-end{
-        padding: 47px 0;
+        vertical-align: middle;
     }
 
 }
-
-
-
-
-

@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
         <title>Spotify</title>
@@ -253,17 +256,21 @@
                     <img src="./img/sinister.jpeg" alt="">
                 </div>
                 <div class="song-name">
-                    <h4>Sinister</h4>
-                    <span>Brano Nome</span>
+                    <a href="#">
+                        <h4>Sinister</h4>
+                        <span>Brano Nome</span>
+                    </a>
                 </div>
                 <div class="song-icons">
-                    <i class="fa-regular fa-heart" style="color: #6e6e6e;"></i>
-                    <i class="fa-regular fa-folder" style="color: #6e6e6e;"></i>
+                    <a href="#">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-regular fa-folder"></i>
+                    </a>
                 </div>
             </div>
-            <div class="time-start">
-                <span>0:25</span>
-            </div>
+            
             <div class="play">
                 <div class="play-buttons">
                     <ul>
@@ -275,21 +282,31 @@
                     </ul>
                 </div>
                 <div class="time-bar">
+                    <div class="time-start">
+                        <span>0:25</span>
+                    </div>
                     <div class="time-bar-block"></div>
                     <div class="time-bar-hover">
                         <i class="fas fa-circle" id="play-circle"></i>
                     </div>
+                    <div class="time-end">
+                        <span> 4:35</span>
+                    </div>
                 </div>
             </div>
-            <div class="time-end">4:35</div>
+            
             <div class="volume">
                 <div class="volume-icons">
                     <ul>
                         <li>
-                            <i class="fas fa-list"></i>
+                            <a href="#">
+                                <i class="fas fa-list"></i>
+                            </a>
                         </li>
                         <li>
-                            <i class="fas fa-desktop"></i>
+                            <a href="#">
+                                <i class="fas fa-desktop"></i>
+                            </a>
                         </li>
                         <li>
                             <i class="fas fa-volume-high"></i>
