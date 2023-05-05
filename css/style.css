@@ -54,11 +54,29 @@ body{
     background-color: black;
 }
 
+.top-navbar{
+    /* background-color: black;
+    width: 260px; */
+    height: 80vh;
+    z-index: 3;
+    position: fixed;
+}
+
 .left-logo{
     /* height: 80px;
     background-color: rgba(255, 68, 0, 0.411); */
     top: 0;
     left:0;
+    z-index: 4;
+}
+
+#left-logo-mobile{
+    position: fixed;
+    max-width: 50px;
+    left: 0;
+    padding: 5px;
+    display: none;
+    
 }
 
 #left-logo-img{
@@ -85,12 +103,18 @@ body{
     font-size: 15px;
 }
 
+#navbar-home{
+    border-left: 1px solid greenyellow;
+}
+
 .navbar-playlist{
     /* height: 462px;
     background-color: rgb(219, 219, 148); */
     left: 0;
     top: 230px;
     margin-top: 30px;
+    height: 35%;
+    overflow-y: auto;
 }
 
 .navbar-playlist li{
@@ -98,12 +122,14 @@ body{
     font-size: 14px;
 }
 
+
 .navbar-playlist li span{
     font-size: 15px;
 }
 
 .navbar-playlist h4, .navbar-playlist ul{
     margin-left: 5%;
+    background-color: black;
 }
 
 .navbar-playlist h4{
@@ -118,6 +144,11 @@ body{
     padding: 10px;
 }
 
+.navbar-list a:hover, .navbar-playlist a:hover, .upper-list a:hover, .install-app a:hover{
+    opacity:1;
+    color: white;
+}
+
 .navbar-singer{
     /* height:155px;
     background-color: rgb(94, 64, 9); */
@@ -125,6 +156,7 @@ body{
     bottom:80px;
     background-color: black;
     right: 260px;
+    z-index: 2;
 }
 
 .install-app{
@@ -178,6 +210,7 @@ body{
     position: fixed;
     display: flex;
     justify-content: right;
+    z-index: 3;
 }
 
 #upgrade-button{
@@ -191,6 +224,10 @@ body{
     color: white;
 }
 
+#upgrade-button:hover{
+    scale: 1.1;
+}
+
 
 
 /* BOTTOM BAR */
@@ -201,11 +238,12 @@ body{
     position: fixed;
     bottom: 0;
     display: flex;
+    z-index: 4;
 }
 
 
 .song, .volume{
-    width: 25%;
+    width: 30%;
     height: 100%;
     /* background-color: rgb(94, 197, 163); */
     display: flex;
@@ -213,7 +251,7 @@ body{
 
 .time-start, .time-end{
     height: 100%;
-    width: 7.5%;
+    width: 5%;
     /* background-color: green; */
     display: flex;
     align-items: center;
@@ -233,7 +271,7 @@ body{
 }
 
 .play{
-    width:65%;
+    width:30%;
     height: 100%;
     /* background-color: rgb(15, 37, 37); */
     display: flex;    
@@ -263,7 +301,7 @@ body{
 .play-buttons li{
     display:inline;
     color: white;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 .song-img{
@@ -421,7 +459,21 @@ body{
 .upper-list li{
     display: inline;
     margin: 0px 10px;
+    position: relative;
 }
+
+.upper-list #upper-underline::after{
+    content: '';
+    display: block;
+    background-color: greenyellow;
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+}
+
 
 .recently-played, .created-for, .most-popular{
     width: 100%;
@@ -450,6 +502,34 @@ body{
     border-radius: 50%;
 }
 
+.cards-img{
+    position: relative;
+}
+
+.cards-hover{
+    background-color: rgba(0, 0, 0, 0.507);
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    top: 0;
+    left: 0;
+    font-size: 75px;
+    display: none;
+}
+
+.popular-cards .cards-hover{
+    border-radius: 50%;
+}
+
+.cards-hover i{
+    padding-top: 50%;
+    transform: translateY(-25%);
+}
+
+.cards-img:hover .cards-hover{
+    display: block;
+}
+
 .cards-img img{
     max-width: 100%;
 }
@@ -459,6 +539,100 @@ body{
     margin: 10px 0;
 }
 
+@media screen and (max-width:1200px) {
+    .playlist-cards, .popular-cards{
+        width: calc(100% / 4 - 20px);
+    }
+
+    .upper-list{
+        margin: 20px auto;
+        width: 75%;
+        padding-bottom: 20px;
+        flex-wrap: wrap;
+        text-align: center;
+        line-height: 2.5;
+    }
+}
+
+@media screen and (max-width:768px){
+    .playlist-cards, .popular-cards{
+        width: calc(50% - 20px);
+    }
+
+    .song-icons{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .song-icons i{
+        margin-bottom: 5px;
+    }
+
+    .play-buttons li{
+        margin: 0 5px;
+    }
+
+    .volume-icons i{
+        font-size: 12px;
+    }
+
+    .time-start, .time-end{
+        font-size: 12px;
+    }
+
+    .song-name span{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    .left-navbar, .navbar-singer{
+        width: 60px;
+    }
+
+    #left-logo-mobile{
+        display: block;
+    }
+
+    .navbar-list span, .navbar-playlist, .left-logo, .install-app span, .profile span, #navbar-hr{
+        display: none;
+    }
+
+    .topbar{
+        left: 50px;
+    }
+
+    #upgrade-button{
+        transform: translateX(-65px);
+    }
+
+    .right-main{
+        width: calc(100% - 50px);
+    }
+
+    .navbar-singer{
+        padding-left: 10px;
+    }
+
+    #navbar-arrow{
+        padding: 4px 5px;
+        margin: 10px 5px;
+    }
+
+    .volume-icons li{
+        margin: 0 2px;
+    }
+
+    .song-name{
+        padding-top: 22px;
+    }
+
+    .time-start, .time-end{
+        padding: 47px 0;
+    }
+
+}
 
 
 
